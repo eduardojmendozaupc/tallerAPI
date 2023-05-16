@@ -25,11 +25,27 @@
    ```
 ### 6. Analizar y entender el código para consultar todos los ganadores, esto se hace en el método `getAllWinners` en el controlador (winnerController), servicio (winnerService) y acceso a datos (Winner)
 ### 7. Modificar los demás métodos para que se integren con la base de datos, luego de esto la aplicación debe permitir leer y escribir en la base de datos MySql a trvaés de los siguientes métodos:
-      1. getAllWinners
-      2. getOneWinner
-      3. createNewWinner
-      4. updateOneWinner
-      5. deleteOneWinner
-      
-    Para ello deben ejecutar la sentencia SQL correspondiente a cada uno de los métodos, por ejemplo en el método **getAllWinners** 
-    (el cuál ya se encuentra implementado en el código), se puede ver la sentencia 
+Pueden mirar el siguiente video para que les ayude a comprender el uso de promesas, async y await para manejar asincronía en javascript [Ver video](https://www.youtube.com/watch?v=6O8ax3JYboc&t=1s&ab_channel=CarlosAzaustre-AprendeJavaScript)
+```
+1. getAllWinners
+2. getOneWinner
+3. createNewWinner
+4. updateOneWinner
+5. deleteOneWinner
+```
+Para ello deben ejecutar la sentencia SQL correspondiente a cada una de las operaciones (consultar, crear, actualizar y eliminar), por ejemplo en el método **getAllWinners** (el cuál ya se encuentra implementado en el código), se puede ver el query en el archivo `Winner.js`
+```js
+const getAllWinners = (filterParams) => {
+  return new Promise((resolve, reject) => {
+    let query = "SELECT * FROM winners";
+    if (filterParams.name) {
+      query += " where nombre='" + filterParams.name + "'";
+    }
+    console.log(query);
+    connection.query(query, (error, results) => {
+      if (error) reject({ status: 500, message: error });
+      resolve(Object.values(JSON.parse(JSON.stringify(results))));
+    });
+  });
+};
+```
