@@ -27,11 +27,11 @@
 ### 7. Modificar los demás métodos para que se integren con la base de datos, luego de esto la aplicación debe permitir leer y escribir en la base de datos MySql a trvaés de los siguientes métodos:
 Pueden mirar el siguiente video para que les ayude a comprender el uso de promesas, async y await para manejar asincronía en javascript [Ver video](https://www.youtube.com/watch?v=6O8ax3JYboc&t=1s&ab_channel=CarlosAzaustre-AprendeJavaScript)
 ```
-1. getAllWinners
-2. getOneWinner
-3. createNewWinner
-4. updateOneWinner
-5. deleteOneWinner
+1. getAllWinners (retorna todos los ganadores)
+2. getOneWinner (retorna el ganador cuyo id es pasado por parámetros)
+3. createNewWinner (crea un nuevo ganador)
+4. updateOneWinner (actualiza el ganador cuyo id es pasado por parámetros)
+5. deleteOneWinner (elimina el ganador cuyo id es pasado por parámetros)
 ```
 Para ello deben ejecutar la sentencia SQL correspondiente a cada una de las operaciones (consultar, crear, actualizar y eliminar), por ejemplo en el método **getAllWinners** (el cuál ya se encuentra implementado en el código), se puede ver el query en el archivo `Winner.js`
 ```js
