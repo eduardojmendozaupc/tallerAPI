@@ -49,3 +49,4 @@ const getAllWinners = (filterParams) => {
   });
 };
 ```
+### 8. Para probar los métodos del API pueden utilizar Postman o cualquier otro cliente similar.
