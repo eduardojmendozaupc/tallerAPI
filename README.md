@@ -18,7 +18,7 @@
    npm install
    ```
 ### 4. Configurar las variables de entorno con la información de conexión a la base de datos, esto se dege hacer en el archivo `.env` que se encuentra en la raíz del proyecto
-   ![image](https://github.com/eduardojmendozaupc/tallerAPI/assets/132233607/ab97cefb-2301-4916-9c02-6f84820f3c87)
+   ![image](https://github.com/eduardojmendozaupc/tallerAPI/assets/132233607/a5021f6f-fc32-4343-bdb3-9523e45c13a4)
 ### 5. Ejecutar el proyecto con el siguiente comando
    ```node
    npm run dev
